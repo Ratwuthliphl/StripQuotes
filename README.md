@@ -1,0 +1,2 @@
+# StripQuotes
+ConsoleWrite(_StripQuotes('"' &amp; @ScriptDir &amp; '"') &amp; @CRLF) ConsoleWrite(_StripQuotes("'" &amp; @ScriptFullPath &amp; "'") &amp; @CRLF) ConsoleWrite(_StripQuotes(@ScriptDir) &amp; @CRLF)  ; Version: 1.00. AutoIt: V3.3.8.1 ; Strip quotation marks from a filepath. Func _StripQuotes($sFilePath)     Return StringRegExpReplace($sFilePath, '^("|'')*([^"'']+)("|'')*$', '2') EndFunc   ;==>_StripQuotes
